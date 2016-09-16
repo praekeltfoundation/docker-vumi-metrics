@@ -14,6 +14,6 @@ RUN mkdir -p /etc/supervisor/conf.d \
 WORKDIR /app
 
 COPY ./metrics-entrypoint.sh /app/
-COPY ./conf.d/metrics.con /etc/supervisor/conf.d/metrics.conf
+COPY ./conf.d/metrics.conf /etc/supervisor/conf.d/metrics.conf
 
-CMD ["metrics-entrypoint.sh"]
+CMD ["./metrics-entrypoint.sh"]
