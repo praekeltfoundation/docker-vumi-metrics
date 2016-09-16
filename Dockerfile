@@ -13,6 +13,8 @@ RUN mkdir -p /etc/supervisor/conf.d \
 
 WORKDIR /app
 
+RUN chown vumi:vumi /app
+
 COPY ./metrics-entrypoint.sh /app/
 COPY ./conf.d/metrics.conf /etc/supervisor/conf.d/metrics.conf
 
