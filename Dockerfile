@@ -18,4 +18,6 @@ RUN chown vumi:vumi /app
 COPY ./metrics-entrypoint.sh /app/
 COPY ./conf.d/metrics.conf /etc/supervisor/conf.d/metrics.conf
 
+EXPOSE 8000
+
 CMD ["./metrics-entrypoint.sh"]
