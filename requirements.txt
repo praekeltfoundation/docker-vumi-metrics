@@ -1,4 +1,4 @@
 supervisor==3.3.1
 vumi==0.6.11
 go_api==0.3.1
-go-metrics-api==0.1.9
+go-metrics-api==0.2.0
