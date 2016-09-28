@@ -5,7 +5,7 @@ This container runs the following components:
 1. GraphiteMetricsCollector
 2. 3x MetricAggregators with bucket size set to 10
 3. 1x TimeBucket with buckets count set to 3 and bucket size set to 10
-4. 1x Metrics API exposed on port 8000
+4. 1x [Go Metrics API](http://go-metrics-api.rtfd.io) exposed on port 8000
 
 ## Environment variables
 
