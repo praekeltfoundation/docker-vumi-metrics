@@ -14,8 +14,8 @@ cat > /app/config.yml <<EOF
 ${URL_PATH_PREFIX:+url_path_prefix: $URL_PATH_PREFIX}
 ${STATIC_OWNER_ID:+static_owner_id: $STATIC_OWNER_ID}
 backend:
-  {$AUTH_USERNAME:+basicauth_username: '$AUTH_USERNAME'}
-  {$AUTH_PASSWORD:+basicauth_password: '$AUTH_PASSWORD'}
+  ${AUTH_USERNAME:+basicauth_username: '$AUTH_USERNAME'}
+  ${AUTH_PASSWORD:+basicauth_password: '$AUTH_PASSWORD'}
   ${GRAPHITE_URL:+graphite_url: '$GRAPHITE_URL'}
   ${GRAPHITE_USERNAME:+username: '$GRAPHITE_USERNAME'}
   ${GRAPHITE_PASSWORD:+password: '$GRAPHITE_PASSWORD'}
