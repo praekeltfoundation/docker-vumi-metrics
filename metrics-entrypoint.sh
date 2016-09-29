@@ -29,7 +29,7 @@ backend:
 EOF
 
 echo "Starting Metrics API with config: "
-cat /app/config.yaml
+cat /app/config.yml
 
 # Generate Twisted's plugin cache just before running -- all plugins should be
 # installed at this point. Twisted is installed site-wide, so the root user is
