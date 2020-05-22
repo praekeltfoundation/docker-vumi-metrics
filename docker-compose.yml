@@ -6,7 +6,7 @@ docker-vumi-metrics:
      - example-app:/app
     links:
      - rabbitmq
-     environment:
+    environment:
       - AMQP_HOST=rabbitmq
 rabbitmq:
     image: rabbitmq
