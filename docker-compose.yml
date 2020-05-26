@@ -1,0 +1,16 @@
+docker-vumi-metrics:
+    build: .
+    ports:
+     - "9108:9108"
+     - "8000:8000"
+    volumes:
+     - example-app:/app
+    links:
+     - rabbitmq
+    environment:
+      - AMQP_HOST=rabbitmq
+      - AUTH_USERNAME=username
+      - AUTH_PASSWORD=password
+      - STATIC_OWNER_ID=prd
+rabbitmq:
+    image: rabbitmq
