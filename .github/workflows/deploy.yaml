@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - develop
-      - feature/MOMZA-1227-fix-vumi-metrics-config
 
 jobs:
   build:
