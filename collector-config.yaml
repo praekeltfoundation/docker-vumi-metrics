@@ -1,2 +1,2 @@
 --- # Format String
-  format_string: "%%(metric_name)s %%(value)s %%(timestamp)s\n"
+  format_string: "%(metric_name)s %(value)s %(timestamp)s\n"
