@@ -33,6 +33,7 @@ WORKDIR /app
 RUN chown vumi:vumi /app
 
 COPY ./metrics-entrypoint.sh /app/
+COPY ./collector-config.yaml /app/
 COPY ./conf.d/metrics.conf /etc/supervisor/conf.d/metrics.conf
 
 EXPOSE 8000
