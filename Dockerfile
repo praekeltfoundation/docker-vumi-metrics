@@ -1,7 +1,7 @@
-FROM praekeltfoundation/python-base:debian AS builder
+FROM ghcr.io/praekeltfoundation/pypy-base-nw:2-buster AS builder
 
 RUN apt-get update
-RUN apt-get -yy install curl
+RUN apt-get -yy install curl build-essential libssl-dev libffi-dev
 RUN curl -Ls 'https://github.com/prometheus/graphite_exporter/releases/download/v0.7.1/graphite_exporter-0.7.1.linux-amd64.tar.gz' \
     | tar xz --strip-components 1 --wildcards '*/graphite_exporter'
 
@@ -12,7 +12,7 @@ RUN pip install --upgrade pip
 RUN pip install setuptools_scm
 RUN pip wheel -w /wheels -r /requirements.txt
 
-FROM praekeltfoundation/python-base:debian
+FROM ghcr.io/praekeltfoundation/pypy-base-nw:2-buster
 
 COPY --from=builder /graphite_exporter /graphite_exporter
 
