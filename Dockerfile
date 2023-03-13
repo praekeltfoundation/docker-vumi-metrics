@@ -10,6 +10,8 @@ RUN pip install --upgrade pip
 # We need to install setuptools_scm separately otherwise we can't
 # build a wheel for python-dateutil.
 RUN pip install setuptools_scm
+# We need the backport of the typing module to build Twisted.
+RUN pip install typing==3.10.0.0
 RUN pip wheel -w /wheels -r /requirements.txt
 
 FROM ghcr.io/praekeltfoundation/pypy-base-nw:2-buster
