@@ -1,3 +1,4 @@
+automat<22.10.0
 supervisor==3.3.3
 vumi==0.6.18
 cyclone==1.1
